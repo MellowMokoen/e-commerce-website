@@ -1,7 +1,10 @@
 import React from "react";
+import BagReview from "./BagReview";
 
 export default function BagSidebar() {
     return (
-        <h1>View here</h1>
+        <div>
+            Review
+        </div>
     );
 }
