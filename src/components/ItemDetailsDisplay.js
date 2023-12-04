@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import * as images from "./images";
+import { Link } from "react-router-dom";
 import BagReview from "./BagReview";
 
 // Data array containing information for each item
@@ -9,6 +10,8 @@ const itemsData = [
     name: "Watch",
     image: images.product1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.5,
+    price: 199.99,
   },
 
   {
@@ -64,10 +67,13 @@ const itemsData = [
 
 export default function ProductItems() {
 
-  const [cartItems, setCartItems] = useState([]);
+  const [BagItems, setBagItems] = useState([]);
 
   const addToCart = (item) => {
-    setCartItems((prevCartItems) => [...prevCartItems, item]);
+    setBagItems((prevBagItems) => [
+      ...prevBagItems,
+      { ...item, quantity: 1 }, // Add quantity property to the item
+    ]);
   };
 
   return (
@@ -79,21 +85,28 @@ export default function ProductItems() {
             name={item.name}
             image={item.image}
             description={item.description}
+            rating={item.rating}
+            price={item.price}
             onAddToCart={() => addToCart(item)}
           />
         ))}
       </div>
-      <BagReview cartItems={cartItems} />
+      <Link to="/cart">
+        <button className="review-cart-button">Review Cart</button>
+      </Link>
+      <BagReview cartItems={BagItems} />
     </div>
   );
 }
 
 // Your ItemDetailsDisplay component
-const ItemDetailsDisplay = ({ name, image, description, onAddToCart }) => (
+const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCart }) => (
   <div className="item-card">
     <h2>{name}</h2>
     <img src={image} alt={name} className="item-image" />
     <p>{description}</p>
+    <p>Rating: {rating}</p>
+    <p>Price: {price}</p>
     <button onClick={onAddToCart}>Add to Cart</button>
   </div>
 );
