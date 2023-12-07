@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import ItemDetails from "./ItemDetails";
 import ItemDetailsDisplay from "./ItemDetailsDisplay";
 
+
 export default function ProductDetails() {
 
     const location = useLocation();
@@ -38,7 +39,10 @@ export default function ProductDetails() {
           />
           
         </div>
+
+        
       )}
+      
     </div>
   );
 }

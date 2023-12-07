@@ -7,7 +7,7 @@ import SearchBar from "../components/SearchBar";
 export default function Homepage() {
 
     return (
-        <div>
+        <div className="main-container">
             <SearchBar />
             <MenuSidebar />
             <ProductItems />

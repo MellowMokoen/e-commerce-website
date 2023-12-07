@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as images from "./images";
 import { Link } from "react-router-dom";
 import BagReview from "./BagReview";
+import BagItems from "./BagItems";
 
 // Data array containing information for each item
 const itemsData = [
