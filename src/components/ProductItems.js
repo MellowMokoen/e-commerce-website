@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/ProductItems.css";
@@ -21,6 +22,7 @@ export default function ProductItems() {
             <p className="product-color">Series5 SE</p>
             <p className="product-price">R 529.99 </p>
           </div>
+
            <div className="product-item" onClick={() => handleItemClick(images.product2, "Watch", "Lorem")}>
             <img src={images.product2} alt="watch" />
             <p className="product-name">Sony ZX33OBT</p>
@@ -72,4 +74,3 @@ export default function ProductItems() {
      </div>
     );
 }
-
