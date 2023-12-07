@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import * as images from "./images";
 import { Link } from "react-router-dom";
 import BagReview from "./BagReview";
-import BagItems from "./BagItems";
 
 // Data array containing information for each item
 const itemsData = [
@@ -112,47 +111,20 @@ const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCa
   </div>
 );
 
-
 /*
-// Your ProductItems component
-export default function ProductItem() {
+// ItemDetailsDisplay.js
+import React from "react";
 
-  const [selectedItem, setSelectedItem] = useState(null);
-
-  const handleItemClick = (item) => {
-    // Set the selected item when an item is clicked
-    setSelectedItem(item);
-  };
-
-  return (
-    <div className="product-container">
-      <div className="row">
-        {itemsData.map((item) => (
-          <ItemDetailsDisplay
-            key={item.id}
-            item={item}
-            onClick={() => handleItemClick(item)}
-          />
-        ))}
-      </div>
-      {selectedItem && (
-        <ItemDetailsDisplay
-          name={selectedItem.name}
-          image={selectedItem.image}
-          description={selectedItem.description}
-        />
-      )}
-    </div>
-  );
-}
-
-// Your ItemDetailsDisplay component
-const ItemDetailsDisplay = ({ item, onClick }) => (
-  <div className="item-card" onClick={onClick}>
-    <h2>{item.name}</h2>
-    <img src={item.image} alt={item.name} className="item-image" />
-    <p>{item.description}</p>
+const ItemDetailsDisplay = ({ name, image, color, price, onSelect }) => (
+  <div className="item-card" onClick={onSelect}>
+    <h2>{name}</h2>
+    <img src={image} alt={name} className="item-image" />
+    <p>{color}</p>
+    <p>{price}</p>
   </div>
 );
 
+export default ItemDetailsDisplay;
 */
+
+

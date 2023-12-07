@@ -14,3 +14,8 @@ form input, form button {
     background-color: blanchedalmond;
     box-shadow: 3px 3px 3px 3px gray;
 }
+
+#searchbar:focus {
+    outline: none;
+    border: none;
+}
