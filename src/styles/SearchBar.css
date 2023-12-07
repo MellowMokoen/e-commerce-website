@@ -1,0 +1,16 @@
+form input {
+    margin-top: 20px;
+    padding: 7px; 
+}
+
+form button {
+    margin-left: 10px;
+    padding: 6px; 
+}
+
+form input, form button {
+    border: none;
+    border-radius: 5px 5px;
+    background-color: blanchedalmond;
+    box-shadow: 3px 3px 3px 3px gray;
+}
