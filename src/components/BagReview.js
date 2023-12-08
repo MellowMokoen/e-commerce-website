@@ -2,7 +2,7 @@ import React from "react";
 
 const BagReview = ({ cartItems }) => (
   <div className="cart">
-    <h2>Cart bab</h2>
+    <h2>Cart</h2>
     <ul>
       {cartItems && cartItems.map((item, index) => (
         <li key={index}>
