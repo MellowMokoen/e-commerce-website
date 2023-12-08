@@ -7,6 +7,7 @@ import BagItems from "./components/BagItems";
 import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 
+
 function App() {
   return (
     <div className="App">
