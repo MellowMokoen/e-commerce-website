@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "../styles/Payment.css";
 
 function App() {
  const [selectedCard, setSelectedCard] = useState('');
@@ -18,7 +18,7 @@ function App() {
 
  return (
     <div className="App">
-      <h1>Select a Card</h1>
+      <h1>Select a payment method</h1>
       <div className="cards">
         <label>
           <input
@@ -27,7 +27,7 @@ function App() {
             checked={selectedCard === 'mastercard'}
             onChange={handleSelectCard}
           />
-          MasterCard ending in 4242
+          MasterCard
         </label>
         <label>
           <input
@@ -36,7 +36,7 @@ function App() {
             checked={selectedCard === 'visa'}
             onChange={handleSelectCard}
           />
-          VISA Debit ending in 2894
+          EFT
         </label>
       </div>
 
@@ -74,7 +74,7 @@ function App() {
             onChange={(e) => setNewCVC(e.target.value)}
           />
         </label>
-        <button type="button" onClick={handleSaveCard}>
+        <button type="button" className='save-button' onClick={handleSaveCard}>
           Save this as your default payment method
         </button>
       </form>
