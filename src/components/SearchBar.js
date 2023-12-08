@@ -1,8 +1,6 @@
-
 import React, { useState } from 'react';
 import * as images from "./images";
 import "../styles/SearchBar.css";
-import ProductItems from "./ProductItems";
 
 const SearchBar = () => {
  const [search, setSearch] = useState('');
