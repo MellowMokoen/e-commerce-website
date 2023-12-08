@@ -8,7 +8,7 @@ import image5 from "../images/Name=log-out.png";
 
 export default function MenuSidebar() {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   const menuItems = [
     { image: image1, alt: "logo" },
@@ -22,17 +22,26 @@ export default function MenuSidebar() {
     setIsSidebarOpen(!isSidebarOpen);
    };
 
+   const openSidebar = () => {
+    setIsSidebarOpen(true);
+  };
+
     return (
 
-        <div className={`menu-container ${isSidebarOpen ? "open" : "closed"}`}>
+      <div className={`menu-container ${isSidebarOpen ? "open" : "closed"}`}>
       
-         <button onClick={toggleSidebar}>Toggle Sidebar</button>
+         <button className="close-button" onClick={toggleSidebar}>Close</button>
 
         {menuItems.map((item, index) => (
         <div className="menu-sidebar" key={index}>
           <img src={item.image} alt={item.alt} />
         </div>
-      ))}
-    </div>
+       ))}
+       {!isSidebarOpen && (
+        <button className="open-button" onClick={openSidebar}>
+          Open
+        </button>
+      )}
+      </div>
     );
 }
