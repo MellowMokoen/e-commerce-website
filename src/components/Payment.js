@@ -18,7 +18,7 @@ function App() {
 
  return (
     <div className="App">
-      <h1>Select a payment method</h1>
+      <h1>Select a card</h1>
       <div className="cards">
         <label>
           <input
@@ -36,7 +36,7 @@ function App() {
             checked={selectedCard === 'visa'}
             onChange={handleSelectCard}
           />
-          EFT
+          Visa
         </label>
       </div>
 
