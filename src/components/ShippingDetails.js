@@ -53,10 +53,10 @@ const ShippingAddress = () => {
         </Form.Group>
 
         <Form.Group controlId="default">
-          <Form.Check type="checkbox" name="default" onChange={handleChange} label="Save this as your default address" />
+          <Form.Check type="checkbox" name="default" className="default" onChange={handleChange} label="Save this as your default address" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" className="add-address">
           Add Address
         </Button>
       </Form>

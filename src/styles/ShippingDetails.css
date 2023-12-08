@@ -1,12 +1,7 @@
-body {
-    background-color: aliceblue;
-    font-family: monospace;
-    font-weight: bold;
-}
-
-h1, #default {
+h1, .default {
     color: brown;
     margin-top: 32px;
+    font-family: monospace;
 }
 
 .form-label {
@@ -15,6 +10,7 @@ h1, #default {
     font-weight: bold;
     color: brown;
     text-decoration: overline;
+    font-family: monospace;
 }
 
 .form-control {
@@ -22,12 +18,12 @@ h1, #default {
     max-width: 100vh;
 }
 
-#name, #state, #streetName, #city, #code, button {
+#name, #state, #streetName, #city, #code, .add-address, .default {
     margin: 20px;
 }
 
-button {
+.add-address {
     font-size: 12px;
     color: brown;
-    padding: 15px;
+    padding: 10px;
 }
