@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import "../styles/ShippingDetails.css";
 
 //the input fields' values are being controlled by the state of the ShippingAddressPage component.
 const ShippingAddress = () => {
@@ -27,7 +28,7 @@ const ShippingAddress = () => {
       <h1>Shipping Address</h1>
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="name">
-          <Form.Label>Shipping Name</Form.Label>
+          <Form.Label>Your Name</Form.Label>
           <Form.Control type="text" name="name" onChange={handleChange} required />
         </Form.Group>
 
@@ -41,13 +42,13 @@ const ShippingAddress = () => {
           <Form.Control type="text" name="city" onChange={handleChange} required />
         </Form.Group>
 
-        <Form.Group controlId="state">
-          <Form.Label>State / Province</Form.Label>
+        <Form.Group controlId="code">
+          <Form.Label>Postal Code</Form.Label>
           <Form.Control type="text" name="state" onChange={handleChange} required />
         </Form.Group>
 
-        <Form.Group controlId="country">
-          <Form.Label>Country</Form.Label>
+        <Form.Group controlId="state">
+          <Form.Label>State / Province</Form.Label>
           <Form.Control type="text" name="country" onChange={handleChange} required />
         </Form.Group>
 
