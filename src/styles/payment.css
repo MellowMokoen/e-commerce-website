@@ -1,0 +1,39 @@
+.payment {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   }
+   
+   .payment label {
+    display: block;
+    margin-top: 10px;
+   }
+   
+   .payment input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+   }
+   
+   .payment input[type="checkbox"] {
+    margin-top: 5px;
+   }
+   
+   .payment button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   }
+   
+   .payment button:hover {
+    background-color: #0056b3;
+   }
