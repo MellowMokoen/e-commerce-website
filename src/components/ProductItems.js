@@ -45,7 +45,7 @@ export default function ProductItems() {
            </div>
         </div>
 
-         <div className="row">
+        <div className="row" id="row-2">
           <div className="product-item" onClick={() => handleItemClick(images.product5, "Watch", "Lorem")}>
             <img src={images.product5} alt="watch" />
             <p className="product-name">Iphone 11</p>

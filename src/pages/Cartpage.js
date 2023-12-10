@@ -1,12 +1,14 @@
 import React from "react";
-import BagItems from "../components/BagItems"; // Import the BagItems component
+import MenuSidebar from "../components/MenuSidebar";
+import BagSidebar from "../components/BagSidebar";
+import BagReview from "../components/BagReview";
 
-const CartPage = ({ cartItems }) => (
+const Cartpage = ({ cartItems }) => (
   <div>
-    <h1>Cart Page</h1>
-    {/* Pass cartItems to the BagItems component */}
-    <BagItems cartItems={cartItems} />
+    <MenuSidebar />
+    <BagReview cartItems={cartItems} />
+    <BagSidebar />
   </div>
 );
 
-export default CartPage;
+export default Cartpage;

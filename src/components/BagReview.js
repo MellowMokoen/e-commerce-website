@@ -1,24 +1,26 @@
 import React from "react";
+import "../styles/BagReview.css";
 
 const BagReview = ({ cartItems }) => (
   <div className="cart">
-    <h2>Cart bab</h2>
-    <ul>
+
+    <h2>Cart</h2>
+
       {cartItems && cartItems.map((item, index) => (
-        <li key={index}>
+        <div className="cart-item" key={index}>
           <div>
-            <img src={item.image} alt={item.name} className="cart-item-image" />
+            <img src={item.image} alt={item.name} className="cart-item-image" width="30" />
           </div>
-          <div>
+          <div className="item-details">
             <h3>{item.name}</h3>
             <p>{item.description}</p>
             <p>Rating: {item.rating}</p>
             <p>Price: {item.price}</p>
             <p>Quantity: {item.quantity}</p>
           </div>
-        </li>
+        </div>
       ))}
-    </ul>
+  
   </div>
 );
 

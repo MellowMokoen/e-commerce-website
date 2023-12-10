@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import * as images from "./images";
 import "../styles/SearchBar.css";

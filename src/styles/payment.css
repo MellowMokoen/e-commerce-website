@@ -1,39 +1,33 @@
-.payment {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-   }
-   
-   .payment label {
+
+.new-card-form {
+    text-align: center;
+}
+
+h2 {
+    font-size: 15px;
+    font-family: monospace;
+    text-decoration: underline;
+}
+
+label {
     display: block;
-    margin-top: 10px;
-   }
-   
-   .payment input[type="text"] {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-   }
-   
-   .payment input[type="checkbox"] {
-    margin-top: 5px;
-   }
-   
-   .payment button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-   }
-   
-   .payment button:hover {
-    background-color: #0056b3;
-   }
+    margin-bottom: 20px;
+    margin: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: brown;
+    text-decoration: overline;
+    font-family: monospace;
+}
+
+input {
+    outline: none;
+    margin-left: 20px;
+}
+
+.save-button {
+    margin: 12px;
+    color: brown;
+    font-family: monospace;
+    font-weight: bold;
+}

@@ -1,0 +1,29 @@
+h1, .default {
+    color: brown;
+    margin-top: 32px;
+    font-family: monospace;
+}
+
+.form-label {
+    margin: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: brown;
+    text-decoration: overline;
+    font-family: monospace;
+}
+
+.form-control {
+    outline: none;
+    max-width: 100vh;
+}
+
+#name, #state, #streetName, #city, #code, .add-address, .default {
+    margin: 20px;
+}
+
+.add-address {
+    font-size: 12px;
+    color: brown;
+    padding: 10px;
+}

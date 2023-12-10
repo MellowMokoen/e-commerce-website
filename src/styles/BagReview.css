@@ -1,0 +1,27 @@
+
+h3 {
+    color: brown;
+}
+
+.cart-item {
+    display: flex;
+    margin-bottom: 10px;
+
+}
+
+.cart-item div {
+    margin-right: 10px;
+    margin-left: 45px;
+
+}
+
+p {
+    color: brown;
+    font-size: 12px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.item-details {
+    margin-top: 30px;
+}
