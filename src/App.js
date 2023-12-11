@@ -5,6 +5,7 @@ import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
+import Ordersummary from "./components/OrderSummary" ;
 
 
 function App() {

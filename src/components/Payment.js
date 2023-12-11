@@ -1,85 +1,70 @@
 import React, { useState } from 'react';
 import "../styles/Payment.css";
 
-function App() {
- const [selectedCard, setSelectedCard] = useState('');
- const [newCardholderName, setNewCardholderName] = useState('');
- const [newCardNumber, setNewCardNumber] = useState('');
- const [newExpiryDate, setNewExpiryDate] = useState('');
- const [newCVC, setNewCVC] = useState('');
+const Payment = () => {
+ const [cardType, setCardType] = useState('MasterCard');
+ const [cardNumber, setCardNumber] = useState('5126-5987-2214-7621');
+ const [expiryDate, setExpiryDate] = useState(' MM / YYYY');
+ const [cvc, setCvc] = useState('123');
+ const [isDefault, setIsDefault] = useState(false);
 
- const handleSelectCard = (e) => {
-    setSelectedCard(e.target.value);
- };
-
- const handleSaveCard = () => {
-    console.log('Card saved as default payment method.');
+ const handleSubmit = (e) => {
+    e.preventDefault();
+    // Send data to the server for processing
  };
 
  return (
-    <div className="App">
-      <h1>Select a card</h1>
-      <div className="cards">
-        <label>
-          <input
-            type="radio"
-            value="mastercard"
-            checked={selectedCard === 'mastercard'}
-            onChange={handleSelectCard}
-          />
-          MasterCard
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="visa"
-            checked={selectedCard === 'visa'}
-            onChange={handleSelectCard}
-          />
-          Visa
-        </label>
-      </div>
+    <div className="payment">
+      <h2>Payment Method</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="cardType">Card Type:</label>
+        <select
+          id="cardType"
+          value={cardType}
+          onChange={(e) => setCardType(e.target.value)}
+        >
+          <option value="MasterCard">MasterCard</option>
+          <option value="VISA Debit">VISA Debit</option>
+        </select>
 
-      <h2>Add a New Card</h2>
-      <form className="new-card-form">
-        <label>
-          Cardholder Name:
+        <label htmlFor="cardNumber">Card Number:</label>
+        <input
+          id="cardNumber"
+          type="text"
+          value={cardNumber}
+          onChange={(e) => setCardNumber(e.target.value)}
+        />
+
+        <label htmlFor="expiryDate">Expiry Date:</label>
+        <input
+          id="expiryDate"
+          type="text"
+          value={expiryDate}
+          onChange={(e) => setExpiryDate(e.target.value)}
+        />
+
+        <label htmlFor="cvc">CVC:</label>
+        <input
+          id="cvc"
+          type="text"
+          value={cvc}
+          onChange={(e) => setCvc(e.target.value)}
+        />
+
+        <label htmlFor="isDefault">
           <input
-            type="text"
-            value={newCardholderName}
-            onChange={(e) => setNewCardholderName(e.target.value)}
+            id="isDefault"
+            type="checkbox"
+            checked={isDefault}
+            onChange={(e) => setIsDefault(e.target.checked)}
           />
-        </label>
-        <label>
-          Card Number:
-          <input
-            type="text"
-            value={newCardNumber}
-            onChange={(e) => setNewCardNumber(e.target.value)}
-          />
-        </label>
-        <label>
-          Expiry Date:
-          <input
-            type="text"
-            value={newExpiryDate}
-            onChange={(e) => setNewExpiryDate(e.target.value)}
-          />
-        </label>
-        <label>
-          CVC:
-          <input
-            type="text"
-            value={newCVC}
-            onChange={(e) => setNewCVC(e.target.value)}
-          />
-        </label>
-        <button type="button" className='save-button' onClick={handleSaveCard}>
           Save this as your default payment method
-        </button>
+        </label>
+
+        <button type="submit">Add Payment Method</button>
       </form>
     </div>
  );
-}
+};
 
-export default App;
+export default Payment;
