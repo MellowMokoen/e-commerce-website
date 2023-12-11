@@ -1,3 +1,4 @@
+/*
 import React, { useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 
@@ -57,3 +58,4 @@ const Cart = ({ cartItems, onRemove }) => {
 };
 
 export default Cart;
+*/

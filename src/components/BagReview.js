@@ -17,6 +17,7 @@ const BagReview = ({ cartItems }) => (
             <p>Rating: {item.rating}</p>
             <p>Price: {item.price}</p>
             <p>Quantity: {item.quantity}</p>
+            <p>Hey React</p>
           </div>
         </div>
       ))}

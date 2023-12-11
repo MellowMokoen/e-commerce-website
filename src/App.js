@@ -5,7 +5,7 @@ import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
-import Ordersummary from "./components/OrderSummary" ;
+import BagReview from "./components/BagReview";
 
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
           <Route path='/cart' element={<Cartpage />} />
           <Route path='/shipping' element={<ShippingDetails />} />
           <Route path='/payment' element={<Payment />} />
+          <Route path="/review" element={<BagReview />} />
         </Routes>
       </Router>
     </div>
