@@ -7,6 +7,7 @@ import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
 import BagReview from "./components/BagReview";
 
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,7 @@ function App() {
           <Route path='/cart' element={<Cartpage />} />
           <Route path='/shipping' element={<ShippingDetails />} />
           <Route path='/payment' element={<Payment />} />
+          <Route path="/review" element={<BagReview />} />
         </Routes>
       </Router>
     </div>
