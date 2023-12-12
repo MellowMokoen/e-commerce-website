@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import "../styles/OrderSummary.css";
 
@@ -42,3 +43,4 @@ function App() {
 }
 
 export default App;
+*/

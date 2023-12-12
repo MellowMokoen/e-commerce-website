@@ -1,54 +1,13 @@
-import React from "react";
-import BagReview from "../components/BagReview";
-import MenuSidebar from "../components/MenuSidebar";
-import BagSidebar from "../components/BagSidebar";
+import * as images from "./images";
 
-const Cartpage = () => {
-  return (
-    <div className="product-container">
-      <MenuSidebar />
-      <BagReview />
-      <BagSidebar />
-    </div>
-  );
-};
-
-export default Cartpage;
-
-/*
-import React from "react";
-import MenuSidebar from "../components/MenuSidebar";
-import BagSidebar from "../components/BagSidebar";
-import BagReview from "../components/BagReview";
-
-const Cartpage = ({ cartItems }) => (
-  <div>
-    <MenuSidebar />
-    <BagReview cartItems={cartItems} />
-    <BagSidebar />
-  </div>
-);
-
-export default Cartpage;
-
-
-import React from "react";
-//import * as images from "../components/images";
-import BagReview from "../components/BagReview";
-
-
-export default function Cartpage() {
-
-// Data array containing information for each item
-/*
-const cartItems = [
-  {
+export const itemsData = [
+    {
     id: 1,
     name: "Watch",
     image: images.product1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.5,
-    price: 199.99,
+    price: 529.99,
   },
 
   {
@@ -56,6 +15,8 @@ const cartItems = [
     name: "Headphones",
     image: images.product2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.6,
+    price: 638.99,
   },
 
   {
@@ -63,6 +24,8 @@ const cartItems = [
     name: "Iphone 11- Series Black",
     image: images.product3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.8,
+    price: 1219.99,
   },
 
   {
@@ -70,6 +33,8 @@ const cartItems = [
     name: "Iphone 11- Series Blue",
     image: images.product4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.8,
+    price: 1319.99,
   },
 
   {
@@ -77,6 +42,8 @@ const cartItems = [
     name: "Iphone 11- Product Red",
     image: images.product5,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5.0,
+    price: 1419.99,
   },
 
   {
@@ -84,38 +51,26 @@ const cartItems = [
     name: "Iphone 11- Milky White",
     image: images.product6,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.5,
+    price: 1219.99,
   },
 
   {
     id: 7,
-    name: "Iphone 13- Product Red",
+    name: "Iphone 13- Product Pink",
     image: images.product7,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 4.9,
+    price: 1699.99,
   },
 
   {
     id: 8,
-    name: "Iphone 14- Product Red",
+    name: "Iphone 14- Product Blue",
     image: images.product8,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    rating: 5.0,
+    price: 1899.99,
   },
-  
-];
 
-  return (
-    <div className="product-container">
-      
-    <BagReview cartItems={cartItems} />
-  </div>
-);
-    
-}
-
-*/
-
-// Cartpage.js
-
-
-
-
-
+]; 
