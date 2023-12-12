@@ -74,8 +74,7 @@ export default function ProductItems() {
       ...prevBagItems,
       { ...item, quantity: 1 }, // Add quantity property to the item
     ]);
-  };
-
+  }
   return (
     <div className="product-container">
       <div className="row">
@@ -94,10 +93,12 @@ export default function ProductItems() {
       <Link to="/cart">
         <button className="review-cart-button">Review Cart</button>
       </Link>
-      <BagReview cartItems={BagItems} />
-    </div>
-  );
+    <BagReview cartItems={BagItems} />
+  </div>
+);
+    
 }
+
 
 // Your ItemDetailsDisplay component
 const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCart }) => (
@@ -111,20 +112,6 @@ const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCa
   </div>
 );
 
-/*
-// ItemDetailsDisplay.js
-import React from "react";
 
-const ItemDetailsDisplay = ({ name, image, color, price, onSelect }) => (
-  <div className="item-card" onClick={onSelect}>
-    <h2>{name}</h2>
-    <img src={image} alt={name} className="item-image" />
-    <p>{color}</p>
-    <p>{price}</p>
-  </div>
-);
-
-export default ItemDetailsDisplay;
-*/
 
 

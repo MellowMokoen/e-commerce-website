@@ -5,7 +5,6 @@ import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
-import BagReview from "./components/BagReview";
 
 
 function App() {
@@ -16,11 +15,9 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Homepage />} />
           <Route path="/product-details" element={<Productpage />} />
-          <Route path="/cart" element={<BagReview />} />
-          <Route path='/cart' element={<Cartpage />} />
+          <Route path="/cart" element={<Cartpage />} />
           <Route path='/shipping' element={<ShippingDetails />} />
           <Route path='/payment' element={<Payment />} />
-          <Route path="/review" element={<BagReview />} />
         </Routes>
       </Router>
     </div>
