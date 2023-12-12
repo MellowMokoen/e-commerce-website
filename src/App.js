@@ -6,11 +6,12 @@ import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
 import BagReview from "./components/BagReview";
+import Sidebar from './components/BagSidebar';
 
 function App() {
   return (
     <div className="App">
-
+      <Sidebar />
       <Router>
         <Routes>
           <Route path="/" exact element={<Homepage />} />

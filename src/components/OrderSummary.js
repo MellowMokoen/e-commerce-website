@@ -1,59 +1,44 @@
-import React, { useState } from 'react';
-import { Button, Table } from 'react-bootstrap';
+import React from 'react';
+import "../styles/OrderSummary.css";
 
-const Cart = ({ cartItems, onRemove }) => {
- const [total, setTotal] = useState(0);
-
- const calculateTotal = () => {
-    let sum = 0;
-    cartItems.forEach(item => {
-      sum += item.price * item.quantity;
-    });
-    setTotal(sum);
- };
-
- React.useEffect(() => {
-    calculateTotal();
- }, [cartItems]);
-
+function App() {
  return (
-    <div>
-      <Table striped bordered hover>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Color</th>
-            <th>Description</th>
-            <th>Rating</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Remove</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cartItems.map((item, index) => (
-            <tr key={index}>
-              <td>{item.product}</td>
-              <td>{item.color}</td>
-              <td>{item.description}</td>
-              <td>{item.rating}</td>
-              <td>${item.price}</td>
-              <td>{item.quantity}</td>
-              <td>
-                <Button variant="danger" onClick={() => onRemove(item)}>
-                 Remove
-                </Button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </Table>
-      <p>
-        <b>Total:</b> ${total.toFixed(2)}
-      </p>
-      <Button variant="primary">Checkout</Button>
+    <div className="App">
+      <div className="container">
+        <h2>Check your Bag Items</h2>
+        <div className="item">
+          <h3>Dell XPS 13</h3>
+          <p>White</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+          <p>✰✰✰✰✰ 4.5/5</p>
+          <p>$1799.99 x 1</p>
+        </div>
+        <div className="item">
+          <h3>Iphone 11</h3>
+          <p>Navy Blue</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+          <p>★★★★★ 4.5/5</p>
+          <p>$729.99 x 3</p>
+        </div>
+        <div className="item">
+          <h3>Iphone 11</h3>
+          <p>Milky White</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam</p>
+          <p>✰✰✰✰✰ 4.5/5</p>
+          <p>$729.99 x 1</p>
+        </div>
+        <div className="bag">
+          <p>- 1 +</p>
+          <p>$619.99 x 1</p>
+          <p>- 3 +</p>
+          <p>1 +</p>
+          <h3>Bag</h3>
+          <p>Bag Total: $5,849.93</p>
+        </div>
+        <button>Checkout</button>
+      </div>
     </div>
  );
-};
+}
 
-export default Cart;
+export default App;
