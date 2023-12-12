@@ -7,9 +7,9 @@ import * as images from "./images";
 export default function ProductItems() {
   const navigate = useNavigate();
 
-  const handleItemClick = (image, name, description) => {
+  const handleItemClick = (item, image, name, description) => {
     // Navigate to ProductDetails and pass selected image details
-    navigate("/product-details", { image, name, description });
+    navigate(`/product-details/${item.id}`, { image, name, description });
   };
 
     return (

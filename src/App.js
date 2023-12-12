@@ -4,7 +4,7 @@ import Homepage from "./pages/Homepage";
 import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
-import Productpage from './pages/Productpage';
+import ProductDetails from './components/ProductDetails';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Homepage />} />
-          <Route path="/product-details" element={<Productpage />} />
+          <Route path="/product-details/:id" element={<ProductDetails />} />
           <Route path="/cart" element={<Cartpage />} />
           <Route path='/shipping' element={<ShippingDetails />} />
           <Route path='/payment' element={<Payment />} />
