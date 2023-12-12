@@ -1,6 +1,6 @@
 
 h3 {
-    color: brown;
+    color: black;
 }
 
 .cart-item {
@@ -16,7 +16,7 @@ h3 {
 }
 
 p {
-    color: brown;
+    color: black;
     font-size: 12px;
     font-family: monospace;
     font-weight: bold;

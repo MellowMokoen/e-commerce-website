@@ -10,7 +10,7 @@ const BagReview = () => {
 
   return (
     <div className="cart">
-      <h2>Cart</h2>
+      <h2>Your Cart</h2>
       {cartItems && cartItems.length > 0 ? (
         cartItems.map((item, index) => (
           <div className="cart-item" key={index}>
