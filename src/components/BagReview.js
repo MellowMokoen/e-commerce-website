@@ -3,10 +3,9 @@ import "../styles/BagReview.css";
 
 const BagReview = ({ cartItems }) => (
   <div className="cart">
-
     <h2>Cart</h2>
-
-      {cartItems && cartItems.map((item, index) => (
+    {cartItems && cartItems.length > 0 ? (
+      cartItems.map((item, index) => (
         <div className="cart-item" key={index}>
           <div>
             <img src={item.image} alt={item.name} className="cart-item-image" width="30" />
@@ -17,11 +16,12 @@ const BagReview = ({ cartItems }) => (
             <p>Rating: {item.rating}</p>
             <p>Price: {item.price}</p>
             <p>Quantity: {item.quantity}</p>
-            <p>Hey React</p>
           </div>
         </div>
-      ))}
-  
+      ))
+    ) : (
+      <p>Your cart is empty</p>
+    )}
   </div>
 );
 
