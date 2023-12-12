@@ -12,23 +12,23 @@ const ProductItems = () => {
   };
 
   return (
-    <div className="product-container">
+     <div className="product-container">
       <div className="row">
-        <Link to={`/product-details/${item.id}`}>
-
         {itemsData.map((item) => (
-          <ItemDetailsDisplay
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            image={item.image}
-            description={item.description}
-            rating={item.rating}
-            price={item.price}
-            onAddToCart={() => onAddToCart(item)}
-          />
+          <div key={item.id}>
+            {console.log(item)}
+            <Link to={`/product-details/${item.id}`}>
+              <ItemDetailsDisplay
+                name={item.name}
+                image={item.image}
+                description={item.description}
+                rating={item.rating}
+                price={item.price}
+                onAddToCart={() => onAddToCart(item)}
+              />
+            </Link>
+          </div>
         ))}
-        </Link>
       </div>
       <Link to="/cart">
         <button className="review-cart-button">Review Cart</button>
@@ -37,16 +37,14 @@ const ProductItems = () => {
   );
 };
 
-const ItemDetailsDisplay = ({ id, name, image, description, rating, price, onAddToCart }) => (
+const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCart }) => (
   <div className="item-card">
     <h2>{name}</h2>
     <img src={image} alt={name} className="item-image" />
     <p>{description}</p>
     <p>Rating: {rating}</p>
     <p>Price: {price}</p>
-    <Link to={`/product-details/${id}`}>
-      <button>View Details</button>
-    </Link>
+    
     <button onClick={onAddToCart}>Add to Cart</button>
   </div>
 );
