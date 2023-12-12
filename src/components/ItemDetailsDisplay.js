@@ -1,3 +1,64 @@
+import React from "react";
+import { useDispatch } from 'react-redux';
+import { addItem } from '../cartSlice';
+import { Link } from "react-router-dom";
+import { itemsData } from "./Data";
+
+const ProductItems = () => {
+  const dispatch = useDispatch();
+
+  const onAddToCart = (item) => {
+    dispatch(addItem({ ...item, quantity: 1 }));
+  };
+
+  return (
+    <div className="product-container">
+      <div className="row">
+        <Link to={`/product-details/${item.id}`}>
+
+        {itemsData.map((item) => (
+          <ItemDetailsDisplay
+            key={item.id}
+            id={item.id}
+            name={item.name}
+            image={item.image}
+            description={item.description}
+            rating={item.rating}
+            price={item.price}
+            onAddToCart={() => onAddToCart(item)}
+          />
+        ))}
+        </Link>
+      </div>
+      <Link to="/cart">
+        <button className="review-cart-button">Review Cart</button>
+      </Link>
+    </div>
+  );
+};
+
+const ItemDetailsDisplay = ({ id, name, image, description, rating, price, onAddToCart }) => (
+  <div className="item-card">
+    <h2>{name}</h2>
+    <img src={image} alt={name} className="item-image" />
+    <p>{description}</p>
+    <p>Rating: {rating}</p>
+    <p>Price: {price}</p>
+    <Link to={`/product-details/${id}`}>
+      <button>View Details</button>
+    </Link>
+    <button onClick={onAddToCart}>Add to Cart</button>
+  </div>
+);
+
+export default ProductItems;
+
+
+
+
+
+/*
+
 // ProductItems.js
 import React from "react";
 import { useDispatch } from 'react-redux';
@@ -121,3 +182,5 @@ const ItemDetailsDisplay = ({ name, image, description, rating, price, onAddToCa
 );
 
 export default ProductItems;
+
+*/
