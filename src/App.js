@@ -5,8 +5,7 @@ import ShippingDetails from "./components/ShippingDetails" ;
 import Payment from "./components/Payment" ;
 import Cartpage from './pages/Cartpage';
 import Productpage from './pages/Productpage';
-import BagReview from "./components/BagReview";
-import Sidebar from './components/BagSidebar';
+
 
 function App() {
   return (
@@ -15,9 +14,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Homepage />} />
-          <Route path="/product-details" element={<Productpage />} />
-          <Route path="/cart" element={<BagReview />} />
-          <Route path='/cart' element={<Cartpage />} />
+          <Route path="/product-details/:id" element={<Productpage />} />
+          <Route path="/cart" element={<Cartpage />} />
           <Route path='/shipping' element={<ShippingDetails />} />
           <Route path='/payment' element={<Payment />} />
         </Routes>
