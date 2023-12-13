@@ -1,56 +1,71 @@
 import React, { useState } from 'react';
 import "../styles/Payment.css";
+import { Link } from 'react-router-dom';
 
+// Payment component handles user payment information
 const Payment = () => {
- const [cardType, setCardType] = useState('MasterCard');
- const [cardNumber, setCardNumber] = useState('5126-5987-2214-7621');
- const [expiryDate, setExpiryDate] = useState(' MM / YYYY');
- const [cvc, setCvc] = useState('123');
- const [isDefault, setIsDefault] = useState(false);
+  // State variables to manage form inputs
+  const [cardType, setCardType] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [expiryDate, setExpiryDate] = useState('');
+  const [cvc, setCvc] = useState('');
+  const [isDefault, setIsDefault] = useState(false);
 
- const handleSubmit = (e) => {
+  // Handle form submission
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Send data to the server for processing
- };
+  };
 
- return (
+  return (
+    // Container for payment form
     <div className="payment">
+      {/* Payment form */}
       <h2>Payment Method</h2>
       <form onSubmit={handleSubmit}>
+        {/* Card Type selection */}
         <label htmlFor="cardType">Card Type:</label>
         <select
           id="cardType"
           value={cardType}
           onChange={(e) => setCardType(e.target.value)}
         >
+          <option value="" disabled>Select Card Type</option>
           <option value="MasterCard">MasterCard</option>
           <option value="VISA Debit">VISA Debit</option>
         </select>
 
+        {/* Card Number input */}
         <label htmlFor="cardNumber">Card Number:</label>
         <input
           id="cardNumber"
           type="text"
+          placeholder="0000-0000-0000-0000"
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
         />
 
+        {/* Expiry Date input */}
         <label htmlFor="expiryDate">Expiry Date:</label>
         <input
           id="expiryDate"
           type="text"
+          placeholder="MM / YYYY"
           value={expiryDate}
           onChange={(e) => setExpiryDate(e.target.value)}
         />
 
+        {/* CVC input */}
         <label htmlFor="cvc">CVC:</label>
         <input
           id="cvc"
           type="text"
+          placeholder="000"
           value={cvc}
           onChange={(e) => setCvc(e.target.value)}
         />
 
+        {/* Checkbox to save as default payment method */}
         <label htmlFor="isDefault">
           <input
             id="isDefault"
@@ -61,10 +76,13 @@ const Payment = () => {
           Save this as your default payment method
         </label>
 
-        <button type="submit">Add Payment Method</button>
+        {/* Link to navigate to the confirmation page */}
+        <Link to="/confirmation">
+          <button type="submit">Pay</button>
+        </Link>
       </form>
     </div>
- );
+  );
 };
 
 export default Payment;

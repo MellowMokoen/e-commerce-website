@@ -1,67 +1,64 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import "../styles/ShippingDetails.css";
+import { Link } from 'react-router-dom';
 
-//the input fields' values are being controlled by the state of the ShippingAddressPage component.
-const ShippingAddress = () => {
- const [shippingAddress, setShippingAddress] = useState({
+// AddressForm component for capturing shipping details
+const AddressForm = () => {
+  // State to manage form input values
+  const [values, setValues] = useState({
     name: '',
     streetName: '',
     city: '',
-    province: '',
+    state: '',
     country: '',
- });
+  });
 
- //this function is used to handle the changes in each field and update the corresponding value in the shipping address object.
- const handleChange = (e) => {
-    setShippingAddress({ ...shippingAddress, [e.target.name]: e.target.value });
- };
+  // Function to handle changes in form input
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
 
- const handleSubmit = (e) => {
+  // Function to handle form submission
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Perform necessary actions with the shippingAddress object
-    console.log(shippingAddress);
- };
+    console.log('Form data:', values);
+    // Pass the form data to the next page through props or context
+  };
 
- return (
-    <div>
-      <h1>Shipping Address</h1>
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="name">
-          <Form.Label>Your Name</Form.Label>
-          <Form.Control type="text" name="name" onChange={handleChange} required />
-        </Form.Group>
+  return (
+    // Form for capturing shipping details
+    <form onSubmit={handleSubmit}>
+      <div>
+        <label>Shipping Name:</label>
+        <input type="text" name="name" value={values.name} onChange={handleChange} />
+      </div>
+      <div>
+        <label>Street Name:</label>
+        <input type="text" name="streetName" value={values.streetName} onChange={handleChange} />
+      </div>
+      <div>
+        <label>City:</label>
+        <input type="text" name="city" value={values.city} onChange={handleChange} />
+      </div>
+      <div>
+        <label>State / Province:</label>
+        <input type="text" name="state" value={values.state} onChange={handleChange} />
+      </div>
+      <div>
+        <label>Country:</label>
+        <input type="text" name="country" value={values.country} onChange={handleChange} />
+      </div>
 
-        <Form.Group controlId="streetName">
-          <Form.Label>Street Name</Form.Label>
-          <Form.Control type="text" name="streetName" onChange={handleChange} required />
-        </Form.Group>
-
-        <Form.Group controlId="city">
-          <Form.Label>City</Form.Label>
-          <Form.Control type="text" name="city" onChange={handleChange} required />
-        </Form.Group>
-
-        <Form.Group controlId="code">
-          <Form.Label>Postal Code</Form.Label>
-          <Form.Control type="text" name="state" onChange={handleChange} required />
-        </Form.Group>
-
-        <Form.Group controlId="state">
-          <Form.Label>State / Province</Form.Label>
-          <Form.Control type="text" name="country" onChange={handleChange} required />
-        </Form.Group>
-
-        <Form.Group controlId="default">
-          <Form.Check type="checkbox" name="default" className="default" onChange={handleChange} label="Save this as your default address" />
-        </Form.Group>
-
+      {/* Link to the payment page with a button to submit the form */}
+      <Link to="/payment">
         <Button variant="primary" type="submit" className="add-address">
           Add Address
         </Button>
-      </Form>
-    </div>
- );
+      </Link>
+    </form>
+  );
 };
 
-export default ShippingAddress;
+export default AddressForm;
