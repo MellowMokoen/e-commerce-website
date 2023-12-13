@@ -33,7 +33,7 @@ const Payment = () => {
         <input
           id="cardNumber"
           type="text"
-          placeholder="Enter Card Number"
+          placeholder="0000-0000-0000-0000"
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
         />
@@ -51,7 +51,7 @@ const Payment = () => {
         <input
           id="cvc"
           type="text"
-          placeholder="Enter CVC"
+          placeholder="000"
           value={cvc}
           onChange={(e) => setCvc(e.target.value)}
         />
