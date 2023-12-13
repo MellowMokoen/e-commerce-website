@@ -1,17 +1,19 @@
 import React from "react";
 
+// ItemDetails component displays details of a specific item
 const ItemDetails = ({ image, name, description, onBack }) => (
-    
-    <div className="item-details">
-     <h2>{image}</h2>
-     <h3>{name}</h3>
-     <p>{description}</p>
-        
-        <button className="back-to-menu-button" onClick={onBack}>
-          Back to Items
-       </button>
-    </div>
+  // Container for displaying item details
+  <div className="item-details">
+    {/* Item details */}
+    <h2>{image}</h2>
+    <h3>{name}</h3>
+    <p>{description}</p>
 
-    );
-    
-    export default ItemDetails; 
+    {/* Button to go back to the items menu */}
+    <button className="back-to-menu-button" onClick={onBack}>
+      Back to Items
+    </button>
+  </div>
+);
+
+export default ItemDetails;
