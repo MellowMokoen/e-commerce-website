@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from "react-router-dom";
 import { removeItem, increaseQuantity, decreaseQuantity } from '../cartSlice';
 import '../styles/BagReview.css';
 
@@ -35,6 +36,9 @@ const BagReview = () => {
           <div className="total-amount">
             <p>Total Amount: {totalAmount}</p>
           </div>
+          <Link to="/shipping">
+          <button className="checkout-button">Checkout</button>
+          </Link>
         </>
       ) : (
         <p>Your cart is empty</p>

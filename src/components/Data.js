@@ -3,7 +3,7 @@ import * as images from "./images";
 export const itemsData = [
     {
     id: 1,
-    name: "Watch",
+    name: "Apple Watch",
     image: images.product1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.5,
