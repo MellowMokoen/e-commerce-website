@@ -9,8 +9,8 @@ import Productpage from './pages/Productpage';
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
+   <div className="App">
+     
       <Router>
         <Routes>
           <Route path="/" exact element={<Homepage />} />
