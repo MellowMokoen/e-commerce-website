@@ -3,10 +3,10 @@ import "../styles/Payment.css";
 import { Link } from 'react-router-dom';
 
 const Payment = () => {
- const [cardType, setCardType] = useState('MasterCard');
- const [cardNumber, setCardNumber] = useState('5126-5987-2214-7621');
- const [expiryDate, setExpiryDate] = useState(' MM / YYYY');
- const [cvc, setCvc] = useState('123');
+ const [cardType, setCardType] = useState('');
+ const [cardNumber, setCardNumber] = useState('');
+ const [expiryDate, setExpiryDate] = useState('');
+ const [cvc, setCvc] = useState('');
  const [isDefault, setIsDefault] = useState(false);
 
  const handleSubmit = (e) => {
@@ -24,6 +24,7 @@ const Payment = () => {
           value={cardType}
           onChange={(e) => setCardType(e.target.value)}
         >
+          <option value="" disabled>Select Card Type</option>
           <option value="MasterCard">MasterCard</option>
           <option value="VISA Debit">VISA Debit</option>
         </select>
@@ -32,6 +33,7 @@ const Payment = () => {
         <input
           id="cardNumber"
           type="text"
+          placeholder="Enter Card Number"
           value={cardNumber}
           onChange={(e) => setCardNumber(e.target.value)}
         />
@@ -40,6 +42,7 @@ const Payment = () => {
         <input
           id="expiryDate"
           type="text"
+          placeholder="MM / YYYY"
           value={expiryDate}
           onChange={(e) => setExpiryDate(e.target.value)}
         />
@@ -48,6 +51,7 @@ const Payment = () => {
         <input
           id="cvc"
           type="text"
+          placeholder="Enter CVC"
           value={cvc}
           onChange={(e) => setCvc(e.target.value)}
         />
@@ -62,7 +66,7 @@ const Payment = () => {
           Save this as your default payment method
         </label>
 
-        <Link to="/confirmation"><button type="submit">Add Payment Method</button></Link>
+        <Link to="/confirmation"><button type="submit">Pay</button></Link>
       </form>
     </div>
  );
