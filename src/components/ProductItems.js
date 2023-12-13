@@ -12,6 +12,7 @@ export default function ProductItems() {
     navigate(`/product-details/${item.id}`, {
       image: item.image,
       name: item.name,
+      color: item.color,
       description: item.description,
     });
   };
