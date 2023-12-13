@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import "../styles/Payment.css";
+import { Link } from 'react-router-dom';
 
 const Payment = () => {
  const [cardType, setCardType] = useState('MasterCard');
@@ -61,7 +62,7 @@ const Payment = () => {
           Save this as your default payment method
         </label>
 
-        <button type="submit">Add Payment Method</button>
+        <Link to="/confirmation"><button type="submit">Add Payment Method</button></Link>
       </form>
     </div>
  );
