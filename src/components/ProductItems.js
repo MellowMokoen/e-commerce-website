@@ -2,7 +2,44 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/ProductItems.css";
-import * as images from "./images";
+import { itemsData } from "./Data";
+
+export default function ProductItems() {
+  const navigate = useNavigate();
+
+  const handleItemClick = (item) => {
+    // Navigate to ProductDetails and pass selected item details
+    navigate(`/product-details/${item.id}`, {
+      image: item.image,
+      name: item.name,
+      description: item.description,
+    });
+  };
+
+  return (
+    <div className="product-container">
+      <div className="row">
+        {itemsData.map((item) => (
+          <div
+            key={item.id}
+            className="product-item"
+            onClick={() => handleItemClick(item)}
+          >
+            <img src={item.image} alt={item.name} />
+            <p className="product-name">{item.name}</p>
+            <p className="product-color">{item.color}</p>
+            <p className="product-price">R {item.price}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+
+
+
+/*
 
 export default function ProductItems() {
   const navigate = useNavigate();
@@ -74,3 +111,4 @@ export default function ProductItems() {
      </div>
     );
 }
+*/
