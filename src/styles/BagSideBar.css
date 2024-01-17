@@ -5,17 +5,17 @@
     right: 0;
     top: 0;
     height: 100vh;
-    width: 200px;
-    background-color: aliceblue;
+    width: 100px;
+    background-color: white;
 }
 
 .bag-view {
-    color: rgb(26, 42, 56);
+    color: white;
     margin-top: 15px;
-    padding: 5px 15px;
+    padding: 5px 5px;
     border: none;
     font-weight: bold;
-    background-color: blanchedalmond;
+    background-color: black;
     border-radius: 6px 6px;
     box-shadow: 3px 3px 3px gray;
 }

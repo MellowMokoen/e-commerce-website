@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/Payment.css";
+import "../styles/payment.css";
 import { Link } from 'react-router-dom';
 
 // Payment component handles user payment information
