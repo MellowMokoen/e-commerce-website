@@ -32,9 +32,9 @@ export default function ProductItems() {
             onClick={() => handleItemClick(item)}
           >
             <img src={item.image} alt={item.name} />
-            <p className="product-name">{item.name}</p>
-            <p className="product-color">{item.color}</p>
-            <p className="product-price">R {item.price}</p>
+            <div className="product-name">{item.name}</div>
+            <div className="product-color">{item.color}</div>
+            <div className="product-price">R {item.price}</div>
           </div>
         ))}
       </div>

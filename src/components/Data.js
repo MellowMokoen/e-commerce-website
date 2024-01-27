@@ -1,9 +1,10 @@
 import * as images from "./images";
 
 export const itemsData = [
-    {
+  {
     id: 1,
     name: "Apple Watch",
+    color: "Series 5 SE",
     image: images.product1,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.5,
@@ -13,6 +14,7 @@ export const itemsData = [
   {
     id: 2,
     name: "Headphones",
+    color: "Light Grey",
     image: images.product2,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.6,
@@ -21,7 +23,8 @@ export const itemsData = [
 
   {
     id: 3,
-    name: "Iphone 11- Series Black",
+    name: "Iphone 11",
+    color: "Series Black",
     image: images.product3,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.8,
@@ -30,7 +33,8 @@ export const itemsData = [
 
   {
     id: 4,
-    name: "Iphone 11- Series Blue",
+    name: "Iphone 11",
+    color: "Series Blue",
     image: images.product4,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.8,
@@ -39,7 +43,8 @@ export const itemsData = [
 
   {
     id: 5,
-    name: "Iphone 11- Product Red",
+    name: "Iphone 11",
+    color: "Product Red",
     image: images.product5,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5.0,
@@ -48,7 +53,8 @@ export const itemsData = [
 
   {
     id: 6,
-    name: "Iphone 11- Milky White",
+    name: "Iphone 11",
+    color: "Milky White",
     image: images.product6,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.5,
@@ -57,7 +63,8 @@ export const itemsData = [
 
   {
     id: 7,
-    name: "Iphone 13- Product Pink",
+    name: "Iphone 13",
+    color: "Product Pink",
     image: images.product7,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 4.9,
@@ -66,11 +73,11 @@ export const itemsData = [
 
   {
     id: 8,
-    name: "Iphone 14- Product Blue",
+    name: "Iphone 14",
+    color: "Product Blue",
     image: images.product8,
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     rating: 5.0,
     price: 1899.99,
   },
-
-]; 
+];
