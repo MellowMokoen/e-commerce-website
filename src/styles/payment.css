@@ -1,33 +1,32 @@
-
 .new-card-form {
-    text-align: center;
+  text-align: center;
 }
 
 h2 {
-    font-size: 15px;
-    font-family: monospace;
-    text-decoration: underline;
+  font-size: 15px;
+  font-family: monospace;
+  text-decoration: underline;
 }
 
 label {
-    display: block;
-    margin-bottom: 20px;
-    margin: 30px;
-    font-size: 15px;
-    font-weight: bold;
-    color: brown;
-    text-decoration: overline;
-    font-family: monospace;
+  display: block;
+  margin-bottom: 20px;
+  margin: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  color: brown;
+  text-decoration: overline;
+  font-family: monospace;
 }
 
 input {
-    outline: none;
-    margin-left: 20px;
+  outline: none;
+  margin-left: 20px;
 }
 
 .save-button {
-    margin: 12px;
-    color: brown;
-    font-family: monospace;
-    font-weight: bold;
+  margin: 12px;
+  color: brown;
+  font-family: monospace;
+  font-weight: bold;
 }
