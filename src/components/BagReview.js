@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { removeItem, increaseQuantity, decreaseQuantity } from "../cartSlice";
 import "../styles/BagReview.css";
+import BagSidebar from "./BagSidebar";
 
 // BagReview component displays the items in the shopping cart
 const BagReview = () => {
@@ -58,13 +58,8 @@ const BagReview = () => {
               </div>
             </div>
           ))}
-          {/* Display total amount and link to the shipping page */}
-          <div className="total-amount">
-            <p>Total Amount: {totalAmount}</p>
-          </div>
-          <Link to="/shipping">
-            <button className="checkout-button">Checkout</button>
-          </Link>
+
+          <BagSidebar totalAmount={totalAmount} />
         </>
       ) : (
         // Display a message if the cart is empty
