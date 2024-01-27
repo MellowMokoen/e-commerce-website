@@ -1,47 +1,49 @@
 .menu-container {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 80px;
-    border-radius: 10px 10px;
-    background-color: white;
-    transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  margin: 10px 0 20px 20px;
+  width: 50px;
+  border-radius: 10px 10px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
 }
 
 .menu-sidebar:last-child {
-    margin-top: auto;
+  margin-top: auto;
 }
 
 .menu-container.open {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .menu-container.closed {
-    transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .menu-sidebar {
-    padding: 10px;
+  padding: 10px;
 }
 
 .open-button {
-    position: absolute;
-    left: 80px;
+  position: absolute;
+  left: 80px;
 }
 
 .close-button {
-    margin: 7px;
+  margin: 7px;
 }
-.close-button, .open-button {
-    color: rgb(26, 42, 56);
-    margin-top: 15px;
-    padding: 5px 15px;
-    border: none;
-    font-weight: bold;
-    background-color: white;
-    border-radius: 6px 6px;
-    box-shadow: 3px 3px 3px gray;
+.close-button,
+.open-button {
+  color: rgb(26, 42, 56);
+  margin-top: 15px;
+  padding: 5px 15px;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  border-radius: 6px 6px;
+  box-shadow: 3px 3px 3px gray;
 }

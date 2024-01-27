@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { itemsData } from "./Data";
 import { addItem } from "../cartSlice";
 import "../styles/ProductDetails.css";
@@ -31,6 +31,7 @@ const ProductDetails = () => {
 
   return (
     // Container for displaying product details
+
     <div className="item-card">
       <div className="item-details">
         <img src={image} alt={name} className="item-image" />
@@ -45,9 +46,8 @@ const ProductDetails = () => {
         </div>
       </div>
       <hr />
-      <Link to="/cart">
-        <button className="review-cart-button">Review Cart</button>
-      </Link>
+
+      <div className="item-paragraph-heading">Description</div>
       <div className="item-paragraph">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod{" "}
         <br />

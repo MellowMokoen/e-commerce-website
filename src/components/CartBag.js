@@ -9,6 +9,9 @@ const CartBag = ({ totalAmount }) => (
     <Link to="/shipping">
       <button className="checkout-button">Checkout</button>
     </Link>
+    <Link to="/cart">
+      <button className="review-cart-button">Review Cart</button>
+    </Link>
   </>
 );
 
