@@ -6,23 +6,31 @@
   top: 0;
   height: 100vh;
   width: 100px;
-  background-color: white;
+  border-left: 2px solid gray;
+  padding: 70px;
+  transition: width 0.3s; /* Add smooth transition for width changes */
 }
 
-.bag-view {
-  color: white;
-  margin-top: 15px;
-  padding: 5px 5px;
-  border: none;
-  font-weight: bold;
-  background-color: black;
-  border-radius: 6px 6px;
-  box-shadow: 3px 3px 3px gray;
+.bag-item {
+  padding: 3px;
+  margin: 3px;
 }
 
-/* Add a media query for screens smaller than 768px */
+.bag-item-image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 30px !important;
+  padding: 0 !important;
+}
+
 @media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
+  .bag-container {
+    width: 50px; /* Adjust the width as needed for smaller screens */
+    padding: 10px; /* Adjust the padding as needed for smaller screens */
+  }
+
+  .bag-item-image {
+    width: 15px; /* Adjust the width as needed for smaller screens */
+    padding: 5px 5px;
   }
 }

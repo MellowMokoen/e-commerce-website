@@ -2,11 +2,6 @@ h3 {
   color: black;
 }
 
-.cart-item div {
-  margin-right: 10px;
-  margin-left: 45px;
-}
-
 p {
   color: black;
   font-size: 12px;
@@ -18,6 +13,8 @@ p {
   display: flex;
   margin-bottom: 20px;
   border-radius: 25px 25px;
+  padding: 0 15px;
+  margin-right: 40px;
 }
 
 .item-color {

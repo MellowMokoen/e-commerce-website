@@ -16,16 +16,11 @@ const BagSidebar = () => {
       {cartItems && cartItems.length > 0 ? (
         cartItems.map((item, index) => (
           <div
-            className="cart-item"
+            className="bag-item"
             key={index}
             style={{ backgroundColor: "white" }}
           >
-            <img
-              src={item.image}
-              alt={item.name}
-              className="cart-item-image"
-              width="20"
-            />
+            <img src={item.image} alt={item.name} className="bag-item-image" />
           </div>
         ))
       ) : (
