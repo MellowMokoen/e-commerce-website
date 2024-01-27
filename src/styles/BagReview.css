@@ -1,27 +1,25 @@
-
 h3 {
-    color: black;
-}
-
-.cart-item {
-    display: flex;
-    margin-bottom: 10px;
-
+  color: black;
 }
 
 .cart-item div {
-    margin-right: 10px;
-    margin-left: 45px;
-
+  margin-right: 10px;
+  margin-left: 45px;
 }
 
 p {
-    color: black;
-    font-size: 12px;
-    font-family: monospace;
-    font-weight: bold;
+  color: black;
+  font-size: 12px;
+  font-family: monospace;
+  font-weight: bold;
 }
 
-.item-details {
-    margin-top: 30px;
+.cart-item {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 25px 25px;
+}
+
+.item-color {
+  opacity: 0.5;
 }

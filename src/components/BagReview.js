@@ -19,29 +19,33 @@ const BagReview = () => {
   return (
     // Container for displaying the shopping cart
     <div className="cart">
-      <h2>Your Cart</h2>
+      <h2>Check your Bag Items</h2>
       {cartItems && cartItems.length > 0 ? (
         // Render cart items if the cart is not empty
         <>
           {cartItems.map((item, index) => (
             // Display details for each item in the cart
-            <div className="cart-item" key={index}>
+            <div
+              className="cart-item"
+              key={index}
+              style={{ backgroundColor: "white" }}
+            >
               <div>
                 <img
                   src={item.image}
                   alt={item.name}
                   className="cart-item-image"
-                  width="30"
+                  width="20"
                 />
               </div>
-              <div className="item-details">
+              <div>
                 <h3>{item.name}</h3>
+                <p className="item-color">{item.color}</p>
                 <p>{item.description}</p>
                 <p>Rating: {item.rating}</p>
-                <p>Price: {item.price}</p>
-                <p>Quantity: {item.quantity}</p>
-
-                {/* Buttons to remove, increase, and decrease quantity of the item */}
+                <p>
+                  Price: {item.price} * {item.quantity}
+                </p>
                 <button onClick={() => dispatch(removeItem(item))}>
                   Remove
                 </button>
