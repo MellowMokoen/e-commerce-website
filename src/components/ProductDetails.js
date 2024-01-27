@@ -22,7 +22,7 @@ const ProductDetails = () => {
   }
 
   // Destructuring properties from the selected product
-  const { name, image, description, rating, price } = selectedProduct;
+  const { name, color, image, description, rating, price } = selectedProduct;
 
   // Adds the selected product to the cart with a quantity of 1
   const handleAddToCart = () => {
@@ -32,20 +32,41 @@ const ProductDetails = () => {
   return (
     // Container for displaying product details
     <div className="item-card">
-      {/* Product details */}
-      <h2>{name}</h2>
-      <img src={image} alt={name} className="item-image" />
-      <p>{description}</p>
-      <p>Rating: {rating}</p>
-      <p>Price: {price}</p>
+      <div className="item-details">
+        <img src={image} alt={name} className="item-image" />
 
-      {/* Button to add the product to the cart */}
-      <button onClick={handleAddToCart}>Add to Cart</button>
-
-      {/* Link to navigate to the cart page */}
+        <div className="details">
+          <h2>{name}</h2>
+          <p className="item-color">{color}</p>
+          <p>{rating}</p>
+          <p className="item-price">R {price}</p>
+          <p>{description}</p>
+          <button onClick={handleAddToCart}>Add to Cart</button>
+        </div>
+      </div>
+      <hr />
       <Link to="/cart">
         <button className="review-cart-button">Review Cart</button>
       </Link>
+      <div className="item-paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod{" "}
+        <br />
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
+        <br />
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea{" "}
+        <br />
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate{" "}
+        <br />
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br />
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt{" "}
+        <br />
+        mollit anim id est laborum. commodo consequat. Duis aute irure dolor in
+        reprehenderit in voluptate <br />
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br />
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt{" "}
+        <br />
+        mollit anim id est laborum.
+      </div>
     </div>
   );
 };

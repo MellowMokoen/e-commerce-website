@@ -1,13 +1,45 @@
 button {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    border-radius: 4px 4px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  border-radius: 4px 4px;
+}
+
+h2 {
+  font-size: 33px;
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+
+.item-image {
+  width: 160px;
+  height: 200px;
+  background-color: white;
+  margin-right: 8px;
+  border-radius: 10px 10px;
+}
+
+.item-color {
+  font-size: 15px;
+  opacity: 0.6;
 }
 
 p {
-    font-weight: bold;
-    
+  font-weight: bold;
+}
+
+.item-price {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.item-details {
+  display: flex;
+  justify-content: center;
+}
+
+.details {
+  line-height: 1;
 }
