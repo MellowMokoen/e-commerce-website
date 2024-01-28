@@ -1,17 +1,16 @@
 import React from "react";
 import BagReview from "../components/BagReview";
 import MenuSidebar from "../components/MenuSidebar";
-import BagSidebar from "../components/BagSidebar";
+import Sidebar from "../components/Sidebar";
 
 const Cartpage = () => {
   return (
     <div className="product-container">
       <MenuSidebar />
       <BagReview />
-      <BagSidebar />
+      <Sidebar />
     </div>
   );
 };
 
 export default Cartpage;
-

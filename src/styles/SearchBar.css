@@ -1,26 +1,27 @@
 form {
-    margin: 30px;
+  margin: 30px;
 }
 
 form input {
-    margin-top: 20px;
-    padding: 7px; 
+  margin-top: 20px;
+  padding: 7px;
 }
 
 form button {
-    margin-left: 10px;
-    padding: 6px; 
+  margin-left: 10px;
+  padding: 6px;
 }
 
-form input, form button {
-    border: none;
-    color: black;
-    border-radius: 5px 5px;
-    background-color: white;
-    box-shadow: 3px 3px 3px 3px gray;
+form input,
+form button {
+  border: none;
+  color: black;
+  border-radius: 5px 5px;
+  background-color: white;
+  box-shadow: 3px 3px 3px 3px gray;
 }
 
 #searchbar:focus {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }

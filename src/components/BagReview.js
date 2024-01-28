@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { removeItem, increaseQuantity, decreaseQuantity } from "../cartSlice";
 import "../styles/BagReview.css";
-import BagSidebar from "./BagSidebar";
+import Sidebar from "./Sidebar";
 
 // BagReview component displays the items in the shopping cart
 const BagReview = () => {
@@ -59,7 +59,7 @@ const BagReview = () => {
             </div>
           ))}
 
-          <BagSidebar totalAmount={totalAmount} />
+          <Sidebar totalAmount={totalAmount} />
         </>
       ) : (
         // Display a message if the cart is empty
