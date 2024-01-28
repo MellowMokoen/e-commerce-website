@@ -19,8 +19,13 @@
 .bag-item-image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  width: 30px !important;
+  width: 50px !important;
   padding: 0 !important;
+}
+
+.cart-empty {
+  font-size: 15px;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/CartBag.css";
 
 const CartBag = ({ totalAmount }) => (
   <>
     <div className="total-amount">
-      <p>R {totalAmount}</p>
+      <p>Total : R {totalAmount}</p>
     </div>
     <Link to="/shipping">
       <button className="checkout-button">Checkout</button>

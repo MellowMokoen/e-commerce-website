@@ -11,23 +11,21 @@ const Sidebar = () => {
     0
   );
 
+  const roundedTotal = Math.round(totalAmount * 100) / 100;
+
   return (
     <div className="bag-container">
       {cartItems && cartItems.length > 0 ? (
         cartItems.map((item, index) => (
-          <div
-            className="bag-item"
-            key={index}
-            style={{ backgroundColor: "white" }}
-          >
+          <div className="bag-item" key={index}>
             <img src={item.image} alt={item.name} className="bag-item-image" />
           </div>
         ))
       ) : (
-        <p>Your cart is empty</p>
+        <p className="cart-empty">Your cart is empty</p>
       )}
 
-      <CartBag totalAmount={totalAmount} />
+      <CartBag totalAmount={roundedTotal} />
     </div>
   );
 };
