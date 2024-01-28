@@ -10,9 +10,14 @@ const SearchBar = ({ itemsData, onSearch }) => {
 
   const onFormSubmit = (e) => {
     e.preventDefault();
-    const searchResults = itemsData.filter((product) =>
-      product.name.toLowerCase().includes(search.toLowerCase())
-    );
+    const searchResults = itemsData.filter((product) => {
+      const includesInName = product.name
+        .toLowerCase()
+        .includes(search.toLowerCase());
+      const isHidden = product.hidden && search.toLowerCase() === "hidden"; // Only show hidden items if the search term is "hidden"
+      return includesInName || isHidden;
+    });
+
     onSearch(searchResults);
   };
 
