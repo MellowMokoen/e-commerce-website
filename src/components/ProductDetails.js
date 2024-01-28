@@ -49,23 +49,36 @@ const ProductDetails = () => {
 
       <div className="item-paragraph-heading">Description</div>
       <div className="item-paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod{" "}
-        <br />
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim{" "}
-        <br />
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea{" "}
-        <br />
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate{" "}
-        <br />
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br />
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt{" "}
-        <br />
-        mollit anim id est laborum. commodo consequat. Duis aute irure dolor in
-        reprehenderit in voluptate <br />
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint <br />
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt{" "}
-        <br />
-        mollit anim id est laborum.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod
+        </p>
+        <p>
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        </p>
+        <p>
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea
+        </p>
+        <p>
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        </p>
+        <p>velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
+        <p>
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        </p>
+        <p>
+          mollit anim id est laborum. commodo consequat. Duis aute irure dolor
+          in
+        </p>
+        <p>
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </p>{" "}
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+          officia deserunt mollit anim id est laborum.
+        </p>
       </div>
     </div>
   );
