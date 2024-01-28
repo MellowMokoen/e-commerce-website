@@ -33,7 +33,10 @@ export default function ProductItems({ itemsData }) {
             <img src={item.image} alt={item.name} />
             <div className="product-name">{item.name}</div>
             <div className="product-color">{item.color}</div>
-            <div className="product-price">R {item.price}</div>
+            <span className="product-price">
+              R {item.price}
+              <button className="item-button">B</button>
+            </span>
           </div>
         ))}
       </div>

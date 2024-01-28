@@ -16,6 +16,7 @@ import product15 from "../images/Name=Samsung-S21.png";
 import product16 from "../images/Name=Iphone-13-Pro-01.png";
 import product17 from "../images/Name=Iphone-13-Pro-02.png";
 import product18 from "../images/Name=Iphone-13-Pro-03.png";
+import product19 from "../images/Button.png";
 
 export {
   product1,
@@ -36,4 +37,5 @@ export {
   product16,
   product17,
   product18,
+  product19,
 };
