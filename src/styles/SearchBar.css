@@ -1,5 +1,6 @@
 form {
   margin: 30px;
+  background-color: none;
 }
 
 form input {
@@ -24,4 +25,11 @@ form button {
 #searchbar:focus {
   outline: none;
   border: none;
+}
+
+.product-not-found {
+  color: red;
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 12px;
 }

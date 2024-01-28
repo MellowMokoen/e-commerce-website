@@ -3,9 +3,11 @@ import "../styles/SearchBar.css";
 
 const SearchBar = ({ itemsData, onSearch }) => {
   const [search, setSearch] = useState("");
+  const [notFound, setNotFound] = useState(false);
 
   const onSearchChange = (e) => {
     setSearch(e.target.value);
+    setNotFound(false);
   };
 
   const onFormSubmit = (e) => {
@@ -18,7 +20,12 @@ const SearchBar = ({ itemsData, onSearch }) => {
       return includesInName || isHidden;
     });
 
-    onSearch(searchResults);
+    if (searchResults.length === 0) {
+      setNotFound(true);
+    } else {
+      setNotFound(false);
+      onSearch(searchResults);
+    }
   };
 
   return (
@@ -33,6 +40,8 @@ const SearchBar = ({ itemsData, onSearch }) => {
         />
         <button type="submit">Search</button>
       </form>
+
+      {notFound && <p className="product-not-found">Product not found!</p>}
     </div>
   );
 };
