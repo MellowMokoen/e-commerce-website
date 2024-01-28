@@ -38,7 +38,6 @@ const SearchBar = ({ itemsData, onSearch }) => {
           onChange={onSearchChange}
           id="searchbar"
         />
-        <button type="submit">Search</button>
       </form>
 
       {notFound && <p className="product-not-found">Product not found!</p>}
