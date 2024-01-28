@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/ProductItems.css";
-import { itemsData } from "./Data";
 
 // ProductItems component renders a list of product items
-export default function ProductItems() {
+export default function ProductItems({ itemsData }) {
   // React Router hook to navigate between pages
   const navigate = useNavigate();
 
