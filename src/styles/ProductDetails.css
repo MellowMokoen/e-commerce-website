@@ -1,3 +1,7 @@
+.item-card {
+  padding: 0 200px 0 150px;
+}
+
 button {
   background-color: black;
   color: white;
@@ -30,6 +34,11 @@ h2 {
 
 hr {
   width: 50%;
+}
+
+.back-button {
+  display: flex;
+  margin-left: 50px;
 }
 
 .item-color {

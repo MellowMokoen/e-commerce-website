@@ -1,24 +1,31 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { removeItem, increaseQuantity, decreaseQuantity } from "../cartSlice";
 import "../styles/BagReview.css";
 import Sidebar from "./Sidebar";
 
 // BagReview component displays the items in the shopping cart
-const BagReview = () => {
+const BagReview = ({ totalAmount }) => {
   // Redux hooks for dispatching actions and accessing state
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
 
-  // Calculate the total amount
-  const totalAmount = cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  // useNavigate hook for navigation
+  const navigate = useNavigate();
+
+  // Handle back button click
+  const handleBackButtonClick = () => {
+    // Use navigate to go back to the previous page
+    navigate(-1);
+  };
 
   return (
     // Container for displaying the shopping cart
     <div className="cart">
+      <button className="back-button" onClick={handleBackButtonClick}>
+        Back
+      </button>
       <h2>Check your Bag Items</h2>
       {cartItems && cartItems.length > 0 ? (
         // Render cart items if the cart is not empty

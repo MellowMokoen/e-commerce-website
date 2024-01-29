@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { itemsData } from "./Data";
 import { addItem } from "../cartSlice";
 import "../styles/ProductDetails.css";
@@ -12,6 +12,9 @@ const ProductDetails = () => {
 
   // Redux dispatch hook to dispatch actions
   const dispatch = useDispatch();
+
+  // useNavigate hook for navigation
+  const navigate = useNavigate();
 
   // Finds the selected product from itemsData based on the 'id' parameter
   const selectedProduct = itemsData.find((item) => item.id === parseInt(id));
@@ -29,10 +32,19 @@ const ProductDetails = () => {
     dispatch(addItem({ ...selectedProduct, quantity: 1 }));
   };
 
+  // Handle back button click
+  const handleBackButtonClick = () => {
+    // Use navigate to go back to the previous page
+    navigate(-1);
+  };
+
   return (
     // Container for displaying product details
 
     <div className="item-card">
+      <button className="back-button" onClick={handleBackButtonClick}>
+        Back
+      </button>
       <div className="item-details">
         <img src={image} alt={name} className="item-image" />
 
