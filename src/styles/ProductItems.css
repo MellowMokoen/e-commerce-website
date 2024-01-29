@@ -11,6 +11,8 @@ body {
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  margin-left: 60px; /* Adjust the margin to provide space for the menu */
+  margin-right: 50px;
 }
 
 .product-container .row {

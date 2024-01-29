@@ -16,6 +16,13 @@
   margin: 3px;
 }
 
+@media (max-width: 600px) {
+  .bag-container {
+    max-width: 50%;
+    margin: 40px;
+  }
+}
+
 .bag-item-image {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
