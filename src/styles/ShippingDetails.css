@@ -1,29 +1,31 @@
-h1, .default {
-    color: brown;
-    margin-top: 32px;
-    font-family: monospace;
-}
-
-.form-label {
-    margin: 30px;
-    font-size: 15px;
-    font-weight: bold;
-    color: brown;
-    text-decoration: overline;
-    font-family: monospace;
-}
-
-.form-control {
-    outline: none;
-    max-width: 100vh;
-}
-
-#name, #state, #streetName, #city, #code, .add-address, .default {
-    margin: 20px;
-}
-
-.add-address {
-    font-size: 12px;
-    color: brown;
-    padding: 10px;
-}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  input[type="text"] {
+    height: 24px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
