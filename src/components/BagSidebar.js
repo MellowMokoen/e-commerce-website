@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/BagSidebar.css";
+import "../styles/BagSideBar.css";
 
 export default function BagSidebar() {
     return (

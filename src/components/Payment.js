@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "../styles/Payment.css";
+import "../styles/payment.css";
 
 const Payment = () => {
  const [cardType, setCardType] = useState('MasterCard');
